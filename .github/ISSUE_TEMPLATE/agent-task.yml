@@ -1,0 +1,45 @@
+name: Agent task
+description: Machine-actionable task contract for a cloud coding agent
+title: "[TASK] "
+body:
+  - type: markdown
+    attributes:
+      value: "Complete every field before changing State to ready."
+  - type: dropdown
+    id: state
+    attributes:
+      label: State
+      options: [draft, ready, blocked]
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and non-scope
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      value: "make check"
+    validations:
+      required: true
+  - type: textarea
+    id: hitl
+    attributes:
+      label: HITL triggers
+    validations:
+      required: true
