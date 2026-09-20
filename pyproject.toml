@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jsonl-check"
+version = "0.1.0"
+description = "Small JSONL CLI used to test an agent-native cloud development pipeline."
+requires-python = ">=3.11"
+dependencies = ["click>=8.1,<9"]
+
+[project.optional-dependencies]
+dev = ["mypy>=1.11,<2", "pytest>=8,<9", "ruff>=0.8,<1"]
+
+[project.scripts]
+jsonl-check = "jsonl_check.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["jsonl_check"]
