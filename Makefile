@@ -3,10 +3,10 @@
 check: lint typecheck test
 
 lint:
-	python -m ruff check .
+	python3 -m ruff check .
 
 typecheck:
-	python -m mypy src
+	python3 -m mypy src
 
 test:
-	python -m pytest
+	python3 -m pytest
