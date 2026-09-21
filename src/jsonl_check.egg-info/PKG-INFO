@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: jsonl-check
+Version: 0.1.0
+Summary: Small JSONL CLI used to test an agent-native cloud development pipeline.
+Requires-Python: >=3.11
+Requires-Dist: click<9,>=8.1
+Provides-Extra: dev
+Requires-Dist: mypy<2,>=1.11; extra == "dev"
+Requires-Dist: pytest<9,>=8; extra == "dev"
+Requires-Dist: ruff<1,>=0.8; extra == "dev"

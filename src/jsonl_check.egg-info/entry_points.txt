@@ -1,0 +1,2 @@
+[console_scripts]
+jsonl-check = jsonl_check.cli:main
